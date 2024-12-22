@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    environment:
+      - PGHOST=${PGHOST:?error}
+      - PGDATABASE=${PGDATABASE:?error}
+      - PGUSER=${PGUSER:?error}
+      - PGPASSWORD=${PGPASSWORD:?error}
+    ports:
+      - "3000:3000"
